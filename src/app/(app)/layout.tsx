@@ -1,5 +1,5 @@
+import { ItemSearchProvider } from "@/app/(app)/_components/item-search.provider";
 import { Navbar } from "@/app/(app)/_components/navbar";
-import { ItemSearchProvider } from "@/components/providers/item-search.provider";
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (

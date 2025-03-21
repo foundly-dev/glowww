@@ -7,7 +7,7 @@ export interface ItemCardProps {
 
 export const ItemCard = ({ item }: ItemCardProps) => {
   return (
-    <Card className="max-size-[300px] group relative aspect-square h-full w-full p-8">
+    <Card className="max-size-[300px] group relative aspect-square h-full w-full">
       <CardHeader>
         <CardTitle>{item.title}</CardTitle>
       </CardHeader>

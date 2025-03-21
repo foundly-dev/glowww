@@ -3,7 +3,7 @@
 import { Search, X } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 
-import { useItemSearch } from "@/components/providers/item-search.provider";
+import { useItemSearch } from "@/app/(app)/_components/item-search.provider";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";

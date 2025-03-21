@@ -17,7 +17,9 @@ export const ItemSearchProvider = ({ children }: { children: ReactNode }) => {
   if (!storeRef.current) {
     storeRef.current = createItemSearchStore({
       search: "",
+      tags: [],
       setSearch: () => {},
+      setTags: () => {},
     });
   }
 
