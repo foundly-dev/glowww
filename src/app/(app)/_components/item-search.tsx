@@ -1,7 +1,7 @@
 "use client";
 
 import { Search, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import { useItemSearch } from "@/components/providers/item-search.provider";
 import { Button } from "@/components/ui/button";
@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils";
 export const ItemSearch = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { search, setSearch } = useItemSearch();
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const onOpen = () => {
     setIsOpen(true);
@@ -25,6 +26,18 @@ export const ItemSearch = () => {
     setSearch(e.target.value);
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "Escape") {
+      onClose();
+    }
+  };
+
+  useEffect(() => {
+    if (isOpen && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [isOpen]);
+
   return (
     <div className="relative flex items-center">
       <div
@@ -36,12 +49,13 @@ export const ItemSearch = () => {
         <div className="relative w-full">
           <Search className="text-muted-foreground absolute top-1/2 left-3 z-10 h-4 w-4 -translate-y-1/2" />
           <Input
+            ref={inputRef}
             type="text"
             placeholder="Search..."
             value={search}
             onChange={onSearch}
+            onKeyDown={handleKeyDown}
             className="bg-background w-full pl-10"
-            autoFocus
             disabled={!isOpen}
           />
           <X
