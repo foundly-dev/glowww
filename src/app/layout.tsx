@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
+
 import "./globals.css";
-import { cn } from "@/lib/utils";
 import { fontVariables } from "@/components/ui/fonts";
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Glowww",
