@@ -4,7 +4,7 @@ export const undraw: Item = {
   id: "undraw",
   title: "UnDraw",
   description:
-    "Open-source illustrations for any idea you can imagine and create.",
+    "Open-source illustrations for any idea you can imagine and create. Open-source illustrations for any idea you can imagine and create. Open-source illustrations for any idea you can imagine and create. Open-source illustrations for any idea you can imagine and create.",
   author: {
     name: "Katerina Limpitsouni",
     href: "https://x.com/ninalimpi",

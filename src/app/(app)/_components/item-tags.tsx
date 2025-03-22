@@ -1,18 +1,12 @@
 "use client";
 
-import {
-  ImageIcon,
-  LayoutDashboardIcon,
-  Shapes,
-  TagIcon,
-  Type,
-  XIcon,
-} from "lucide-react";
+import { XIcon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { tags as allTags, Tag } from "@/content/schema";
 
 import { useItemSearch } from "./item-search.provider";
+import { ItemTagIcon } from "./item-tag-icon";
 
 export const ItemTags = () => {
   const { tags, setTags } = useItemSearch();
@@ -31,30 +25,20 @@ export const ItemTags = () => {
         return (
           <Button
             key={tag}
+            size="sm"
             variant={isActive ? "default" : "outline"}
             onClick={() => onTagClick(tag)}
           >
-            {tagIcon(tag)}
+            <ItemTagIcon tag={tag} />
             {tag}
           </Button>
         );
       })}
 
-      <Button variant="ghost" onClick={() => setTags([])}>
+      <Button size="sm" variant="ghost" onClick={() => setTags([])}>
         <XIcon className="h-4 w-4" />
         Clear
       </Button>
     </div>
-  );
-};
-
-const tagIcon = (tag: Tag) => {
-  return (
-    {
-      Illustration: <ImageIcon />,
-      "UI Kit": <LayoutDashboardIcon />,
-      Font: <Type />,
-      Icon: <Shapes />,
-    }[tag] ?? <TagIcon />
   );
 };

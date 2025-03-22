@@ -22,6 +22,17 @@ export const FilteredItemGrid = () => {
   });
 
   if (filteredItems.length === 0) {
+    if (search.length > 0) {
+      return (
+        <div className="flex h-full flex-col items-center justify-center">
+          <p>
+            No items found for search{" "}
+            <span className="font-bold">&quot;{search}&quot;</span>
+          </p>
+        </div>
+      );
+    }
+
     return (
       <div className="flex h-full flex-col items-center justify-center">
         <p>No items found</p>
