@@ -5,6 +5,11 @@ import { useState, useRef, useEffect, useCallback } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import {
+  Tooltip,
+  TooltipTrigger,
+  TooltipContent,
+} from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 
 import { useItemSearch } from "../store/item-search.provider";
@@ -18,10 +23,10 @@ export const ItemSearch = () => {
     setIsOpen(true);
   }, []);
 
-  const onClose = () => {
+  const onClose = useCallback(() => {
     setIsOpen(false);
     setSearch("");
-  };
+  }, [setSearch]);
 
   const onSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearch(e.target.value);
@@ -45,11 +50,26 @@ export const ItemSearch = () => {
     }
   }, [search, isOpen, onOpen]);
 
+  useEffect(() => {
+    const down = (e: KeyboardEvent) => {
+      if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
+        e.preventDefault();
+        if (isOpen) {
+          onClose();
+        } else {
+          onOpen();
+        }
+      }
+    };
+    document.addEventListener("keydown", down);
+    return () => document.removeEventListener("keydown", down);
+  }, [onOpen, onClose, isOpen]);
+
   return (
     <div className="relative flex items-center">
       <div
         className={cn(
-          "flex items-center transition-all duration-300 ease-in-out",
+          "flex items-center transition-all duration-200 ease-in-out",
           isOpen ? "w-[200px]" : "w-0 overflow-hidden opacity-0",
         )}
       >
@@ -71,17 +91,25 @@ export const ItemSearch = () => {
           />
         </div>
       </div>
-      <Button
-        variant="ghost"
-        size="icon"
-        onClick={onOpen}
-        className={cn(
-          "transition-all duration-300 ease-in-out",
-          isOpen ? "w-0 scale-0 opacity-0" : "scale-100 opacity-100",
-        )}
-      >
-        <Search className="text-muted-foreground size-4" />
-      </Button>
+
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={onOpen}
+            className={cn(
+              "transition-all duration-200 ease-in-out",
+              isOpen ? "w-0 scale-0 opacity-0" : "scale-100 opacity-100",
+            )}
+          >
+            <Search className="text-muted-foreground size-4" />
+          </Button>
+        </TooltipTrigger>
+        <TooltipContent>
+          <p>Search (⌘K)</p>
+        </TooltipContent>
+      </Tooltip>
     </div>
   );
 };

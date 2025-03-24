@@ -8,6 +8,11 @@ import {
   SelectContent,
   SelectItem,
 } from "@/components/ui/select";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 import { useItemSearch } from "../store/item-search.provider";
 import { sortOptions } from "../store/item-search.store";
@@ -26,7 +31,12 @@ export const ItemSort = () => {
         className="hover:bg-accent h-9 w-9 border-none px-2.5 shadow-none dark:bg-transparent"
         chevronClassName="hidden"
       >
-        {sort.icon}
+        <Tooltip>
+          <TooltipTrigger asChild>{sort.icon}</TooltipTrigger>
+          <TooltipContent>
+            <p>Sort Results</p>
+          </TooltipContent>
+        </Tooltip>
       </SelectTrigger>
       <SelectContent className="mb-4" align="center">
         {sortOptions.map((option) => (

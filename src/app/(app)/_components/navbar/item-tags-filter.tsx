@@ -17,12 +17,16 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { tags as allTags, Tag } from "@/content/schema";
 import { cn } from "@/lib/utils";
 
 import { ItemTagIcon } from "../items/item-tag-icon";
 import { useItemSearch } from "../store/item-search.provider";
-
 export const ItemTagsFilter = () => {
   const { tags, setTags } = useItemSearch();
   const [open, setOpen] = React.useState(false);
@@ -36,14 +40,21 @@ export const ItemTagsFilter = () => {
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
-        <Button variant="ghost" size="icon" className="relative">
-          <Filter className="text-muted-foreground size-4" />
-          {tags.length > 0 && (
-            <div className="bg-primary text-primary-foreground absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full text-[10px]">
-              {tags.length}
-            </div>
-          )}
-        </Button>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <Button variant="ghost" size="icon" className="relative">
+              <Filter className="text-muted-foreground size-4" />
+              {tags.length > 0 && (
+                <div className="bg-primary text-primary-foreground absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full text-[10px]">
+                  {tags.length}
+                </div>
+              )}
+            </Button>
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>Filter Results</p>
+          </TooltipContent>
+        </Tooltip>
       </PopoverTrigger>
       <PopoverContent className="mb-4 w-[200px] p-0">
         <Command>

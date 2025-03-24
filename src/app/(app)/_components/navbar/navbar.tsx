@@ -2,7 +2,7 @@ import { Home } from "lucide-react";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
-import { ModeToggle } from "@/components/ui/mode-toggle";
+import { ColorModeToggle } from "@/components/ui/color-mode-toggle";
 
 import { ItemFavourites } from "./item-favourites";
 import { ItemSearch } from "./item-search";
@@ -23,7 +23,7 @@ export const Navbar = () => {
       <ItemSort />
       <ItemFavourites />
       <div className="bg-border flex h-6 w-[1px]" />
-      <ModeToggle />
+      <ColorModeToggle />
     </div>
   );
 };
