@@ -1,6 +1,5 @@
 "use client";
 
-import { Code2 } from "lucide-react";
 import Link from "next/link";
 
 import Github from "@/components/icons/github-icon";
@@ -8,7 +7,12 @@ import X from "@/components/icons/x-icon";
 import { Button } from "@/components/ui/button";
 import { ColorModeToggle } from "@/components/ui/color-mode-toggle";
 import { Separator } from "@/components/ui/separator";
-import { foundlyLink, githubLink, twitterLink } from "@/content/socials";
+import {
+  foundlyLink,
+  githubLink,
+  foundlyTwitterLink,
+  mfbevanTwitterLink,
+} from "@/content/socials";
 
 import { Logo } from "./logo";
 
@@ -17,7 +21,7 @@ export const Header = () => {
     <div className="bg-background sticky top-0 z-10 flex w-screen flex-col gap-2">
       <div className="flex flex-col">
         <div className="flex items-center justify-between">
-          <div className="flex w-full items-center gap-2 p-2">
+          <div className="flex items-center gap-2 p-2">
             <Logo className="size-8 rounded-md" />
             <h1 className="text-2xl font-bold">
               glowww
@@ -38,7 +42,7 @@ export const Header = () => {
 
             <Separator orientation="vertical" className="h-12" />
 
-            <Link href={twitterLink} target="_blank">
+            <Link href={foundlyTwitterLink} target="_blank">
               <Button variant="ghost">
                 <X /> @foundlylabs
               </Button>
@@ -46,9 +50,9 @@ export const Header = () => {
 
             <Separator orientation="vertical" className="h-12" />
 
-            <Link href={foundlyLink} target="_blank">
+            <Link href={mfbevanTwitterLink} target="_blank">
               <Button variant="ghost">
-                <Code2 /> foundly.dev
+                <X /> @0xmfbevan
               </Button>
             </Link>
 
@@ -68,17 +72,9 @@ export const Header = () => {
 
             <Separator orientation="vertical" className="h-12" />
 
-            <Link href={twitterLink} target="_blank">
+            <Link href={mfbevanTwitterLink} target="_blank">
               <Button variant="ghost" size="icon">
                 <X />
-              </Button>
-            </Link>
-
-            <Separator orientation="vertical" className="h-12" />
-
-            <Link href={foundlyLink} target="_blank">
-              <Button variant="ghost" size="icon">
-                <Code2 />
               </Button>
             </Link>
 

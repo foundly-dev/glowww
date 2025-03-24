@@ -2,9 +2,9 @@ import { Item } from "../schema";
 
 export const svgl: Item = {
   id: "svgl",
-  title: "SVGL",
+  title: "svgl",
   description:
-    "A beautiful library with SVG logos. Built with Sveltekit & Tailwind CSS.",
+    "A beautiful library for SVG logos. Built with Sveltekit & Tailwind CSS.",
   author: {
     name: "Pablo",
     href: "https://pheralb.dev/",

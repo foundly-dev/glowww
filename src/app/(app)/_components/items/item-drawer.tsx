@@ -1,8 +1,9 @@
-import { ExternalLink, Github, Globe } from "lucide-react";
+import { ExternalLink, Globe, Package } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
 
+import Github from "@/components/icons/github-icon";
 import X from "@/components/icons/x-icon";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -71,6 +72,13 @@ export const ItemDrawer = ({ item, children }: ItemDrawerProps) => {
                 <Link href={item.socials.x} target="_blank">
                   <Button variant="ghost" size="icon">
                     <X />
+                  </Button>
+                </Link>
+              )}
+              {item.socials?.npm && (
+                <Link href={item.socials.npm} target="_blank">
+                  <Button variant="ghost" size="icon">
+                    <Package />
                   </Button>
                 </Link>
               )}

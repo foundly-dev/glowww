@@ -21,6 +21,7 @@ export interface Item {
     x?: string;
     website?: string;
     github?: string;
+    npm?: string;
   };
   /**
    * If a source is defined, this implies that the item is embedded in another site.
