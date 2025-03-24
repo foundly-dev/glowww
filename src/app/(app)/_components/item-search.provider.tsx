@@ -18,8 +18,10 @@ export const ItemSearchProvider = ({ children }: { children: ReactNode }) => {
     storeRef.current = createItemSearchStore({
       search: "",
       tags: [],
+      selected: null,
       setSearch: () => {},
       setTags: () => {},
+      setSelected: () => {},
     });
   }
 
