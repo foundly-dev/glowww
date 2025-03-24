@@ -12,25 +12,15 @@ import { Item } from "@/content/schema";
 import { cn } from "@/lib/utils";
 
 import { ItemDrawer } from "./item-drawer";
-import { useItemSearch } from "./item-search.provider";
 
 export interface ItemCardProps {
   item: Item;
 }
 
 export const ItemCard = ({ item }: ItemCardProps) => {
-  const { setSelected } = useItemSearch();
-
-  const onSelect = () => {
-    setSelected(item);
-  };
-
   return (
     <ItemDrawer item={item}>
-      <Card
-        className="max-size-[300px] group relative aspect-square h-full w-full cursor-pointer justify-end overflow-hidden p-0"
-        onClick={onSelect}
-      >
+      <Card className="max-size-[300px] group relative aspect-square h-full w-full cursor-pointer justify-end overflow-hidden p-0">
         <Image
           src={item.image}
           alt={item.title}

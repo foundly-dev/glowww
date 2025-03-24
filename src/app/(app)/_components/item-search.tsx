@@ -1,7 +1,7 @@
 "use client";
 
 import { Search, X } from "lucide-react";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 
 import { useItemSearch } from "@/app/(app)/_components/item-search.provider";
 import { Button } from "@/components/ui/button";
@@ -13,9 +13,9 @@ export const ItemSearch = () => {
   const { search, setSearch } = useItemSearch();
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const onOpen = () => {
+  const onOpen = useCallback(() => {
     setIsOpen(true);
-  };
+  }, []);
 
   const onClose = () => {
     setIsOpen(false);
@@ -37,6 +37,12 @@ export const ItemSearch = () => {
       inputRef.current.focus();
     }
   }, [isOpen]);
+
+  useEffect(() => {
+    if (search && !isOpen) {
+      onOpen();
+    }
+  }, [search, isOpen, onOpen]);
 
   return (
     <div className="relative flex items-center">
