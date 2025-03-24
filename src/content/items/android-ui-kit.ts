@@ -4,14 +4,15 @@ import { figma } from "../sources/figma";
 export const androidUiKit: Item = {
   id: "android-ui-kit",
   title: "Android UI Kit",
-  description: "A UI kit for Android",
+  description:
+    "Get started designing for Android faster and easier with an introductory guide, styles, components, and system templates. Includes templates for Android system UI features: Notifications, Widgets, System bars and device frames, Camera, Bubbles and shortcuts",
   author: {
     name: "Android Design",
-    href: "https://www.figma.com/@materialdesign",
+    href: "https://www.figma.com/@androiddesign",
   },
-  href: "https://www.figma.com/community/file/1237551184114564748",
+  href: "https://www.figma.com/community/file/1478523627015571873",
   source: figma,
-  tags: ["UI Kit"],
-  image: "/images/android-ui-kit.png",
+  tags: ["UI Kits"],
+  image: "/items/android-ui-kit.png",
   dateAdded: new Date("2021-01-01"),
 };

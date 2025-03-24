@@ -1,4 +1,4 @@
-import { Star } from "lucide-react";
+import { Bookmark } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Item } from "@/content/schema";
@@ -31,7 +31,7 @@ export const ItemFavourite = ({ item, className }: ItemFavouriteProps) => {
       size="icon"
       className={cn(className)}
     >
-      <Star
+      <Bookmark
         fill={isFavourite ? "currentColor" : "none"}
         className={cn(
           isFavourite && "text-amber-500",

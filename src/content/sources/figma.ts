@@ -5,7 +5,7 @@ export const figma: Source = {
   title: "Figma",
   description:
     "Figma is a design tool that allows you to create and share designs with your team.",
-  image: "/images/figma.png",
+  image: "/sources/figma.svg",
   tags: ["design", "figma"],
   href: "https://figma.com",
 };

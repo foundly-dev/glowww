@@ -33,8 +33,13 @@ export const FilteredItemGrid = () => {
     const descriptionMatch = item.description
       .toLowerCase()
       .includes(search.toLowerCase());
+    const sourceDescriptionMatch = item.source?.description
+      .toLowerCase()
+      .includes(search.toLowerCase());
     const contentMatch =
-      search?.length > 0 ? titleMatch || descriptionMatch : true;
+      search?.length > 0
+        ? titleMatch || descriptionMatch || sourceDescriptionMatch
+        : true;
 
     const tagsMatch =
       tags.length > 0 ? tags.some((tag) => item.tags.includes(tag)) : true;

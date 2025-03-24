@@ -19,10 +19,10 @@ export const ItemTagIcon = ({
 export const itemTagIcon = (tag: Tag) => {
   return (
     {
-      Illustration: ImageIcon,
-      "UI Kit": LayoutDashboardIcon,
-      Font: Type,
-      Icon: Shapes,
+      Illustrations: ImageIcon,
+      "UI Kits": LayoutDashboardIcon,
+      Icons: Shapes,
+      Fonts: Type,
     }[tag] ?? TagIcon
   );
 };

@@ -1,6 +1,6 @@
 "use client";
 
-import { Star } from "lucide-react";
+import { Bookmark } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -16,7 +16,7 @@ export const ItemFavourites = () => {
 
   return (
     <Button variant="ghost" size="icon" onClick={onToggle}>
-      <Star
+      <Bookmark
         className={cn(
           "text-muted-foreground",
           filterFavourites && "text-amber-500",

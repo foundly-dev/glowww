@@ -1,6 +1,6 @@
 import { Source } from "./sources";
 
-export const tags = ["Illustration", "UI Kit", "Icon", "Font"] as const;
+export const tags = ["Illustrations", "UI Kits", "Icons", "Fonts"] as const;
 export type Tag = (typeof tags)[number];
 
 export interface Item {

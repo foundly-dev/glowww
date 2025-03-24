@@ -31,13 +31,13 @@ export const ItemDrawer = ({ item, children }: ItemDrawerProps) => {
       <DrawerTrigger asChild>{children}</DrawerTrigger>
       <DrawerContent>
         <div className="mx-auto flex w-full max-w-sm flex-col md:max-w-2xl md:flex-row">
-          <DrawerHeader>
-            <Card className="relative aspect-square h-full w-full overflow-hidden p-0">
+          <DrawerHeader className="w-full">
+            <Card className="relative aspect-6/4 h-full w-full max-w-[300px] overflow-hidden p-0">
               <Image
                 src={item?.image}
                 alt={item?.title}
-                width={300}
-                height={300}
+                fill
+                className="object-cover"
               />
             </Card>
           </DrawerHeader>
