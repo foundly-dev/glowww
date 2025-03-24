@@ -32,9 +32,9 @@ export const ItemDrawer = ({ item, children }: ItemDrawerProps) => {
     <Drawer>
       <DrawerTrigger asChild>{children}</DrawerTrigger>
       <DrawerContent>
-        <div className="mx-auto flex w-full max-w-sm flex-col md:max-w-2xl md:flex-row">
-          <DrawerHeader className="w-full">
-            <Card className="relative aspect-3/2 w-full max-w-[300px] overflow-hidden p-0">
+        <div className="mx-auto flex w-full max-w-sm flex-col px-4 md:max-w-2xl md:flex-row">
+          <DrawerHeader className="w-full px-0">
+            <Card className="relative aspect-3/2 w-full overflow-hidden p-0 md:max-w-[300px]">
               <Image
                 src={item?.image}
                 alt={item?.title}
