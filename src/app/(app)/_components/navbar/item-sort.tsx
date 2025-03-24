@@ -27,17 +27,19 @@ export const ItemSort = () => {
 
   return (
     <Select value={sort.value} onValueChange={onSortChange}>
-      <SelectTrigger
-        className="hover:bg-accent h-9 w-9 border-none px-2.5 shadow-none dark:bg-transparent"
-        chevronClassName="hidden"
-      >
-        <Tooltip>
-          <TooltipTrigger asChild>{sort.icon}</TooltipTrigger>
-          <TooltipContent>
-            <p>Sort Results</p>
-          </TooltipContent>
-        </Tooltip>
-      </SelectTrigger>
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <SelectTrigger
+            className="hover:bg-accent h-9 w-9 border-none px-2.5 shadow-none dark:bg-transparent"
+            chevronClassName="hidden"
+          >
+            {sort.icon}
+          </SelectTrigger>
+        </TooltipTrigger>
+        <TooltipContent>
+          <p>Sort Results</p>
+        </TooltipContent>
+      </Tooltip>
       <SelectContent className="mb-4" align="center">
         {sortOptions.map((option) => (
           <SelectItem key={option.value} value={option.value}>

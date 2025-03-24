@@ -39,9 +39,9 @@ export const ItemTagsFilter = () => {
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
-      <PopoverTrigger asChild>
-        <Tooltip>
-          <TooltipTrigger asChild>
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <PopoverTrigger asChild>
             <Button variant="ghost" size="icon" className="relative">
               <Filter className="text-muted-foreground size-4" />
               {tags.length > 0 && (
@@ -50,12 +50,12 @@ export const ItemTagsFilter = () => {
                 </div>
               )}
             </Button>
-          </TooltipTrigger>
-          <TooltipContent>
-            <p>Filter Results</p>
-          </TooltipContent>
-        </Tooltip>
-      </PopoverTrigger>
+          </PopoverTrigger>
+        </TooltipTrigger>
+        <TooltipContent>
+          <p>Filter Results</p>
+        </TooltipContent>
+      </Tooltip>
       <PopoverContent className="mb-4 w-[200px] p-0">
         <Command>
           <div className="relative">

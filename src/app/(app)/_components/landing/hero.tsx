@@ -62,7 +62,7 @@ export const Hero = () => {
         </div>
 
         <p className="text-muted-foreground text-sm">
-          An open source project by{" "}
+          This is an open source project by{" "}
           <Link
             href={foundlyLink}
             className="text-primary font-medium hover:underline"
