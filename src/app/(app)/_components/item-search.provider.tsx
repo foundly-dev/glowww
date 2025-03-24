@@ -1,20 +1,13 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { useRouter } from "next/navigation";
-import {
-  createContext,
-  ReactNode,
-  useCallback,
-  useContext,
-  useEffect,
-  useRef,
-} from "react";
+import { createContext, ReactNode, useContext, useRef } from "react";
 import { useStore } from "zustand";
 
+import { useQueryStoreSync } from "@/components/hooks/use-query-store-sync";
 import { Tag } from "@/content/schema";
 
-import { createItemSearchStore } from "./item-search.store";
+import { createItemSearchStore, sortOptions } from "./item-search.store";
 
 export type ItemSearchStoreApi = ReturnType<typeof createItemSearchStore>;
 
@@ -32,8 +25,10 @@ export const ItemSearchProvider = ({ children }: { children: ReactNode }) => {
     storeRef.current = createItemSearchStore({
       search,
       tags,
+      sort: sortOptions[0],
       setSearch: () => {},
       setTags: () => {},
+      setSort: () => {},
     });
   }
 
@@ -54,20 +49,9 @@ export const useItemSearch = () => {
 };
 
 export const ItemSearchSync = () => {
-  const router = useRouter();
-  const { search, tags } = useItemSearch();
-
-  const createQueryString = useCallback(() => {
-    const params = new URLSearchParams();
-    if (search) params.set("search", search);
-    if (tags.length) params.set("tags", tags.join(","));
-    return params.toString();
-  }, [search, tags]);
-
-  useEffect(() => {
-    const queryString = createQueryString();
-    window.history.replaceState({}, "", queryString ? `?${queryString}` : "");
-  }, [search, tags, router, createQueryString]);
+  const { search, tags, setSearch, setTags } = useItemSearch();
+  useQueryStoreSync("search", search, setSearch);
+  useQueryStoreSync("tags", tags, setTags);
 
   return null;
 };

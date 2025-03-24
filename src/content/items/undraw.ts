@@ -16,4 +16,5 @@ export const undraw: Item = {
   socials: {
     x: "https://x.com/ninalimpi",
   },
+  dateAdded: new Date("2021-01-01"),
 };

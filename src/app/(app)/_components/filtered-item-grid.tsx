@@ -1,11 +1,31 @@
 "use client";
+
 import { useItemSearch } from "@/app/(app)/_components/item-search.provider";
 import { items } from "@/content/items";
+import { Item } from "@/content/schema";
 
 import { ItemGrid } from "./item-grid";
 
 export const FilteredItemGrid = () => {
-  const { tags, search } = useItemSearch();
+  const { tags, search, sort } = useItemSearch();
+
+  const sortItems = (items: Item[]) => {
+    if (sort.value === "newest") {
+      return items.sort(
+        (a, b) => b.dateAdded.getTime() - a.dateAdded.getTime(),
+      );
+    }
+
+    if (sort.value === "alphabetical") {
+      return items.sort((a, b) => a.title.localeCompare(b.title));
+    }
+
+    if (sort.value === "reverse-alphabetical") {
+      return items.sort((a, b) => b.title.localeCompare(a.title));
+    }
+
+    return items;
+  };
 
   const filteredItems = items.filter((item) => {
     const titleMatch = item.title.toLowerCase().includes(search.toLowerCase());
@@ -21,7 +41,9 @@ export const FilteredItemGrid = () => {
     return contentMatch && tagsMatch;
   });
 
-  if (filteredItems.length === 0) {
+  const sortedItems = sortItems(filteredItems);
+
+  if (sortedItems.length === 0) {
     if (search.length > 0) {
       return (
         <div className="flex h-full flex-col items-center justify-center">

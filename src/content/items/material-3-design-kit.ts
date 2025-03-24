@@ -13,4 +13,5 @@ export const material3DesignKit: Item = {
   source: figma,
   image: "/images/material-3-design-kit.png",
   tags: ["UI Kit"],
+  dateAdded: new Date("2021-01-01"),
 };

@@ -27,4 +27,8 @@ export interface Item {
    * e.g an SVG pack might be from a Figma community library.
    */
   source?: Source;
+  /**
+   * The date the item was added to the database.
+   */
+  dateAdded: Date;
 }

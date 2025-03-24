@@ -49,7 +49,7 @@ export const ItemSearch = () => {
       <div
         className={cn(
           "flex items-center transition-all duration-300 ease-in-out",
-          isOpen ? "w-[240px]" : "w-0 overflow-hidden opacity-0",
+          isOpen ? "w-[200px]" : "w-0 overflow-hidden opacity-0",
         )}
       >
         <div className="relative w-full">

@@ -13,4 +13,5 @@ export const androidUiKit: Item = {
   source: figma,
   tags: ["UI Kit"],
   image: "/images/android-ui-kit.png",
+  dateAdded: new Date("2021-01-01"),
 };

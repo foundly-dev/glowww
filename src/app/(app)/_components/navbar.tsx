@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/ui/mode-toggle";
 
 import { ItemSearch } from "./item-search";
+import { ItemSort } from "./item-sort";
+import { ItemTagsFilter } from "./item-tags-filter";
 
 export const Navbar = () => {
   return (
@@ -16,6 +18,8 @@ export const Navbar = () => {
       </Link>
       <div className="bg-border flex h-6 w-[1px]" />
       <ItemSearch />
+      <ItemTagsFilter />
+      <ItemSort />
       <div className="bg-border flex h-6 w-[1px]" />
       <ModeToggle />
     </div>
