@@ -34,7 +34,7 @@ export const ItemFavourite = ({ item, className }: ItemFavouriteProps) => {
       <Star
         fill={isFavourite ? "currentColor" : "none"}
         className={cn(
-          isFavourite && "text-yellow-500",
+          isFavourite && "text-amber-500",
           "transition-all duration-200",
         )}
       />

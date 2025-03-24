@@ -11,7 +11,7 @@ import { ItemTagsFilter } from "./item-tags-filter";
 
 export const Navbar = () => {
   return (
-    <div className="border-border bg-background/50 fixed bottom-4 left-1/2 z-10 mx-auto flex -translate-x-1/2 items-center justify-between gap-2 rounded-xl border p-2 backdrop-blur-sm">
+    <div className="border-border bg-background fixed bottom-4 left-1/2 z-10 mx-auto flex -translate-x-1/2 items-center justify-between gap-2 rounded-xl border p-2 backdrop-blur-sm">
       <Link href="/">
         <Button variant="ghost" size="icon">
           <Home className="text-muted-foreground size-4" />
