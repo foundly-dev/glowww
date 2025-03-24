@@ -82,7 +82,7 @@ export default function RootLayout({
       <body className={cn(`antialiased`, ...fontVariables)}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="light"
           enableSystem={false}
           disableTransitionOnChange
         >

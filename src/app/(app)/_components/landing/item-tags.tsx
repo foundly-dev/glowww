@@ -19,35 +19,37 @@ export const ItemTags = () => {
   };
 
   return (
-    <div className="flex flex-wrap gap-2">
-      {allTags.map((tag) => {
-        const isActive = tags.includes(tag);
+    <div className="flex gap-2">
+      <div className="scrollbar-hide no-scrollbar flex w-full gap-2 overflow-x-scroll">
+        {allTags.map((tag) => {
+          const isActive = tags.includes(tag);
 
-        return (
-          <Button
-            key={tag}
-            size="sm"
-            variant={isActive ? "default" : "outline"}
-            onClick={() => onTagClick(tag)}
-            className="relative"
-          >
-            <ItemTagIcon
-              tag={tag}
-              className={cn(
-                "absolute left-2 h-4 w-4 transition-all duration-300 ease-in-out",
-                isActive ? "rotate-180 opacity-0" : "opacity-100",
-              )}
-            />
-            <Check
-              className={cn(
-                "absolute left-2 h-4 w-4 transition-all duration-300 ease-in-out",
-                isActive ? "opacity-100" : "-rotate-180 opacity-0",
-              )}
-            />
-            <span className="ml-5">{tag}</span>
-          </Button>
-        );
-      })}
+          return (
+            <Button
+              key={tag}
+              size="sm"
+              variant={isActive ? "default" : "outline"}
+              onClick={() => onTagClick(tag)}
+              className="relative"
+            >
+              <ItemTagIcon
+                tag={tag}
+                className={cn(
+                  "absolute left-2 h-4 w-4 transition-all duration-300 ease-in-out",
+                  isActive ? "rotate-180 opacity-0" : "opacity-100",
+                )}
+              />
+              <Check
+                className={cn(
+                  "absolute left-2 h-4 w-4 transition-all duration-300 ease-in-out",
+                  isActive ? "opacity-100" : "-rotate-180 opacity-0",
+                )}
+              />
+              <span className="ml-5">{tag}</span>
+            </Button>
+          );
+        })}
+      </div>
 
       <Button size="sm" variant="ghost" onClick={() => setTags([])}>
         <XIcon className="h-4 w-4" />

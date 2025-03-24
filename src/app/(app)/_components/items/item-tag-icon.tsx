@@ -1,10 +1,14 @@
 import {
   Bot,
+  Boxes,
   Code2,
   ImageIcon,
-  LayoutDashboardIcon,
+  PenTool,
+  Presentation,
   Shapes,
   Sparkles,
+  TabletSmartphone,
+  TriangleDashed,
   Type,
 } from "lucide-react";
 import { TagIcon } from "lucide-react";
@@ -27,13 +31,17 @@ export const ItemTagIcon = ({
 export const itemTagIcon = (tag: Tag) => {
   return (
     {
-      Illustrations: ImageIcon,
-      "UI Kits": LayoutDashboardIcon,
+      "3D": Boxes,
+      Illustrations: PenTool,
+      "UI Kits": TabletSmartphone,
       Icons: Shapes,
+      Images: ImageIcon,
       Fonts: Type,
       Components: Code2,
       AI: Bot,
       Inspiration: Sparkles,
+      Presentations: Presentation,
+      Logos: TriangleDashed,
     }[tag] ?? TagIcon
   );
 };

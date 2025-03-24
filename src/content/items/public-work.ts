@@ -9,7 +9,7 @@ export const publicWork: Item = {
     name: "Cosmos",
   },
   image: "/items/public-work.png",
-  tags: ["Illustrations", "Inspiration"],
+  tags: ["Images", "Illustrations"],
   href: "https://public.work/",
   socials: {
     // Add social links if available

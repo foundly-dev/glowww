@@ -1,13 +1,16 @@
 import { Source } from "./sources";
 
 export const tags = [
-  "AI",
+  "3D",
   "Components",
   "Fonts",
   "Icons",
   "Illustrations",
-  "UI Kits",
+  "Images",
   "Inspiration",
+  "Logos",
+  "Presentations",
+  "UI Kits",
 ] as const;
 export type Tag = (typeof tags)[number];
 
