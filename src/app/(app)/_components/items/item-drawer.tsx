@@ -36,10 +36,16 @@ export const ItemDrawer = ({ item, children }: ItemDrawerProps) => {
           <DrawerHeader className="w-full px-0">
             <Card className="relative aspect-3/2 w-full overflow-hidden p-0 md:max-w-[300px]">
               <Image
+                src={item.image}
+                alt={item.title}
+                fill
+                className="zobject-cover blur-xs"
+              />
+              <Image
                 src={item?.image}
                 alt={item?.title}
                 fill
-                className="object-cover"
+                className="object-contain"
               />
             </Card>
           </DrawerHeader>

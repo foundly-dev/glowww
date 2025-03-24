@@ -29,7 +29,13 @@ export const ItemCard = ({ item }: ItemCardProps) => {
             src={item.image}
             alt={item.title}
             fill
-            className="z-[1] object-cover transition-all duration-200 group-hover:scale-110 group-hover:blur"
+            className="z-0 object-cover blur-xs"
+          />
+          <Image
+            src={item.image}
+            alt={item.title}
+            fill
+            className="z-[1] object-contain transition-all duration-200 group-hover:scale-110 group-hover:blur"
           />
 
           <div className="absolute inset-0 z-[2] bg-gradient-to-t from-black/60 to-transparent" />
