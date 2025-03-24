@@ -24,11 +24,17 @@ export const ItemSearchProvider = ({ children }: { children: ReactNode }) => {
   if (!storeRef.current) {
     storeRef.current = createItemSearchStore({
       search,
-      tags,
-      sort: sortOptions[0],
       setSearch: () => {},
+      tags,
       setTags: () => {},
+      sort: sortOptions[0],
       setSort: () => {},
+      filterFavourites: false,
+      setFilterFavourites: () => {},
+      favourites: [],
+      setFavourites: () => {},
+      addFavourite: () => {},
+      removeFavourite: () => {},
     });
   }
 

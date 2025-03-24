@@ -1,13 +1,14 @@
 "use client";
 
-import { useItemSearch } from "@/app/(app)/_components/item-search.provider";
 import { items } from "@/content/items";
 import { Item } from "@/content/schema";
+
+import { useItemSearch } from "../store/item-search.provider";
 
 import { ItemGrid } from "./item-grid";
 
 export const FilteredItemGrid = () => {
-  const { tags, search, sort } = useItemSearch();
+  const { tags, search, sort, filterFavourites, favourites } = useItemSearch();
 
   const sortItems = (items: Item[]) => {
     if (sort.value === "newest") {
@@ -38,7 +39,11 @@ export const FilteredItemGrid = () => {
     const tagsMatch =
       tags.length > 0 ? tags.some((tag) => item.tags.includes(tag)) : true;
 
-    return contentMatch && tagsMatch;
+    const favouritesMatch = filterFavourites
+      ? favourites.includes(item.id)
+      : true;
+
+    return contentMatch && tagsMatch && favouritesMatch;
   });
 
   const sortedItems = sortItems(filteredItems);

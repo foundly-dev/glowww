@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/ui/mode-toggle";
 
+import { ItemFavourites } from "./item-favourites";
 import { ItemSearch } from "./item-search";
 import { ItemSort } from "./item-sort";
 import { ItemTagsFilter } from "./item-tags-filter";
@@ -20,6 +21,7 @@ export const Navbar = () => {
       <ItemSearch />
       <ItemTagsFilter />
       <ItemSort />
+      <ItemFavourites />
       <div className="bg-border flex h-6 w-[1px]" />
       <ModeToggle />
     </div>

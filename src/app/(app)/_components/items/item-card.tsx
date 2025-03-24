@@ -12,6 +12,7 @@ import { Item } from "@/content/schema";
 import { cn } from "@/lib/utils";
 
 import { ItemDrawer } from "./item-drawer";
+import { ItemFavourite } from "./item-favourite";
 
 export interface ItemCardProps {
   item: Item;
@@ -27,6 +28,8 @@ export const ItemCard = ({ item }: ItemCardProps) => {
           fill
           className="z-[1] object-cover transition-all duration-200 group-hover:scale-110 group-hover:blur"
         />
+
+        <ItemFavourite item={item} className="absolute top-2 right-2 z-[3]" />
 
         <div className="absolute inset-0 z-[2] bg-gradient-to-t from-black/60 to-transparent" />
 

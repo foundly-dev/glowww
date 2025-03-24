@@ -9,8 +9,8 @@ import {
   SelectItem,
 } from "@/components/ui/select";
 
-import { useItemSearch } from "./item-search.provider";
-import { sortOptions } from "./item-search.store";
+import { useItemSearch } from "../store/item-search.provider";
+import { sortOptions } from "../store/item-search.store";
 
 export const ItemSort = () => {
   const { sort, setSort } = useItemSearch();

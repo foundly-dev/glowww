@@ -15,6 +15,8 @@ import {
 } from "@/components/ui/drawer";
 import { Item } from "@/content/schema";
 
+import { ItemFavourite } from "./item-favourite";
+
 export interface ItemDrawerProps {
   item: Item;
   /**
@@ -40,9 +42,12 @@ export const ItemDrawer = ({ item, children }: ItemDrawerProps) => {
             </Card>
           </DrawerHeader>
 
-          <div className="flex flex-col gap-4 py-4">
-            <div className="">
-              <DrawerTitle>{item?.title}</DrawerTitle>
+          <div className="flex w-full flex-col gap-4 py-4">
+            <div className="flex w-full flex-col gap-2">
+              <div className="flex items-center justify-between gap-2">
+                <DrawerTitle>{item?.title}</DrawerTitle>
+                <ItemFavourite item={item} />
+              </div>
               <DrawerDescription>{item?.description}</DrawerDescription>
             </div>
             <Link href={item.href} target="_blank" className="self-end">

@@ -3,10 +3,11 @@
 import { Search, X } from "lucide-react";
 import { useState, useRef, useEffect, useCallback } from "react";
 
-import { useItemSearch } from "@/app/(app)/_components/item-search.provider";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
+
+import { useItemSearch } from "../store/item-search.provider";
 
 export const ItemSearch = () => {
   const [isOpen, setIsOpen] = useState(false);

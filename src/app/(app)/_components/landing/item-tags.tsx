@@ -5,8 +5,8 @@ import { XIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { tags as allTags, Tag } from "@/content/schema";
 
-import { useItemSearch } from "./item-search.provider";
-import { ItemTagIcon } from "./item-tag-icon";
+import { ItemTagIcon } from "../items/item-tag-icon";
+import { useItemSearch } from "../store/item-search.provider";
 
 export const ItemTags = () => {
   const { tags, setTags } = useItemSearch();
