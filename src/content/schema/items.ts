@@ -7,6 +7,7 @@ export const tags = [
   "Icons",
   "Illustrations",
   "UI Kits",
+  "Inspiration",
 ] as const;
 export type Tag = (typeof tags)[number];
 

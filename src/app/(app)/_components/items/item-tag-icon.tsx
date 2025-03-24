@@ -4,6 +4,7 @@ import {
   ImageIcon,
   LayoutDashboardIcon,
   Shapes,
+  Sparkles,
   Type,
 } from "lucide-react";
 import { TagIcon } from "lucide-react";
@@ -32,6 +33,7 @@ export const itemTagIcon = (tag: Tag) => {
       Fonts: Type,
       Components: Code2,
       AI: Bot,
+      Inspiration: Sparkles,
     }[tag] ?? TagIcon
   );
 };
