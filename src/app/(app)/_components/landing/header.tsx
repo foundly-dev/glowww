@@ -87,12 +87,14 @@ export const Header = () => {
         <Separator />
 
         <div className="flex flex-col p-2 pb-0">
-          <div className="text-muted-foreground line-clamp-1 flex gap-1 text-sm">
-            Tools & resources to make your designs glowww.
-          </div>
-
-          <p className="text-muted-foreground text-sm">
-            This is an open source project developed by{" "}
+          <div className="text-muted-foreground text-sm">
+            A curated collection of design and developer resources to make your
+            projects{" "}
+            <span className="bg-gradient-to-tr from-amber-400 to-orange-600 bg-clip-text pl-1 font-bold text-transparent">
+              glowww
+            </span>
+            .<br className="hidden md:block" /> This is an open source project
+            developed by{" "}
             <Link
               href={mfbevanTwitterLink}
               className="text-primary font-medium hover:underline"
@@ -106,7 +108,7 @@ export const Header = () => {
               className="text-primary font-medium hover:underline"
               target="_blank"
             >
-              Foundly
+              Foundly Labs
             </Link>
             . For contributions or change requests, head to{" "}
             <Link
@@ -118,7 +120,7 @@ export const Header = () => {
               foundly-dev/glowww
             </Link>
             .
-          </p>
+          </div>
         </div>
       </div>
       <Separator />
