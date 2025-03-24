@@ -92,7 +92,15 @@ export const Header = () => {
           </div>
 
           <p className="text-muted-foreground text-sm">
-            This is an open source project by{" "}
+            This is an open source project developed by{" "}
+            <Link
+              href={mfbevanTwitterLink}
+              className="text-primary font-medium hover:underline"
+              target="_blank"
+            >
+              mfbevan
+            </Link>{" "}
+            and{" "}
             <Link
               href={foundlyLink}
               className="text-primary font-medium hover:underline"

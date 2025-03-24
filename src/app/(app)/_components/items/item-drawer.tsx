@@ -34,7 +34,7 @@ export const ItemDrawer = ({ item, children }: ItemDrawerProps) => {
       <DrawerContent>
         <div className="mx-auto flex w-full max-w-sm flex-col md:max-w-2xl md:flex-row">
           <DrawerHeader className="w-full">
-            <Card className="relative aspect-3/2 h-full w-full max-w-[300px] overflow-hidden p-0">
+            <Card className="relative aspect-3/2 w-full max-w-[300px] overflow-hidden p-0">
               <Image
                 src={item?.image}
                 alt={item?.title}
