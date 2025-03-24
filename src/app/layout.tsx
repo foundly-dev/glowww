@@ -1,9 +1,11 @@
+import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 
-import "./globals.css";
 import { fontVariables } from "@/components/ui/fonts";
 import { cn } from "@/lib/utils";
+
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Glowww",
@@ -25,6 +27,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
