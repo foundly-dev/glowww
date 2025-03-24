@@ -22,8 +22,6 @@ export const Navbar = () => {
       <ItemTagsFilter />
       <ItemSort />
       <ItemFavourites />
-      <div className="bg-border flex h-6 w-[1px]" />
-      <ColorModeToggle />
     </div>
   );
 };

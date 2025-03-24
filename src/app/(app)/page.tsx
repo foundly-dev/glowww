@@ -7,7 +7,7 @@ export default function Home() {
     <main className="flex flex-col">
       <Hero />
       <div>
-        <div className="flex flex-col gap-4 p-4 pb-24 md:p-8">
+        <div className="flex flex-col gap-4 p-4 pb-24">
           <ItemTags />
           <FilteredItemGrid />
         </div>
