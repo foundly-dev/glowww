@@ -1,5 +1,6 @@
 "use client";
 
+import { Code2 } from "lucide-react";
 import Link from "next/link";
 
 import Github from "@/components/icons/github-icon";
@@ -11,7 +12,7 @@ import { foundlyLink, githubLink, twitterLink } from "@/content/socials";
 
 import { Logo } from "./logo";
 
-export const Hero = () => {
+export const Header = () => {
   return (
     <div className="bg-background sticky top-0 z-10 flex w-screen flex-col gap-2">
       <div className="flex flex-col">
@@ -26,7 +27,7 @@ export const Hero = () => {
             </h1>
           </div>
 
-          <div className="hidden items-center gap-2 pr-2 md:flex">
+          <div className="tex hidden items-center gap-2 pr-2 md:flex">
             <Separator orientation="vertical" className="h-12" />
 
             <Link href={githubLink} target="_blank">
@@ -40,6 +41,14 @@ export const Hero = () => {
             <Link href={twitterLink} target="_blank">
               <Button variant="ghost">
                 <X /> @foundlylabs
+              </Button>
+            </Link>
+
+            <Separator orientation="vertical" className="h-12" />
+
+            <Link href={foundlyLink} target="_blank">
+              <Button variant="ghost">
+                <Code2 /> foundly.dev
               </Button>
             </Link>
 
@@ -64,6 +73,18 @@ export const Hero = () => {
                 <X />
               </Button>
             </Link>
+
+            <Separator orientation="vertical" className="h-12" />
+
+            <Link href={foundlyLink} target="_blank">
+              <Button variant="ghost" size="icon">
+                <Code2 />
+              </Button>
+            </Link>
+
+            <Separator orientation="vertical" className="h-12" />
+
+            <ColorModeToggle />
           </div>
         </div>
 
