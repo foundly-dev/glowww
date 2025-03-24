@@ -24,7 +24,7 @@ export const ItemCard = ({ item }: ItemCardProps) => {
   return (
     <ItemDrawer item={item}>
       <div className="group flex cursor-pointer flex-col gap-2">
-        <Card className="max-size-[300px] relative aspect-6/4 h-full w-full justify-end overflow-hidden p-0">
+        <Card className="max-size-[300px] relative aspect-3/2 h-full w-full justify-end overflow-hidden p-0">
           <Image
             src={item.image}
             alt={item.title}
