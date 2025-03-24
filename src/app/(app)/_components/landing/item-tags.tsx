@@ -1,9 +1,10 @@
 "use client";
 
-import { XIcon } from "lucide-react";
+import { Check, XIcon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { tags as allTags, Tag } from "@/content/schema";
+import { cn } from "@/lib/utils";
 
 import { ItemTagIcon } from "../items/item-tag-icon";
 import { useItemSearch } from "../store/item-search.provider";
@@ -28,9 +29,22 @@ export const ItemTags = () => {
             size="sm"
             variant={isActive ? "default" : "outline"}
             onClick={() => onTagClick(tag)}
+            className="relative"
           >
-            <ItemTagIcon tag={tag} />
-            {tag}
+            <ItemTagIcon
+              tag={tag}
+              className={cn(
+                "absolute left-2 h-4 w-4 transition-all duration-300 ease-in-out",
+                isActive ? "rotate-180 opacity-0" : "opacity-100",
+              )}
+            />
+            <Check
+              className={cn(
+                "absolute left-2 h-4 w-4 transition-all duration-300 ease-in-out",
+                isActive ? "opacity-100" : "-rotate-180 opacity-0",
+              )}
+            />
+            <span className="ml-5">{tag}</span>
           </Button>
         );
       })}

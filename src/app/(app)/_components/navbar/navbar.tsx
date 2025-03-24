@@ -2,7 +2,6 @@ import { Home } from "lucide-react";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
-import { ColorModeToggle } from "@/components/ui/color-mode-toggle";
 
 import { ItemFavourites } from "./item-favourites";
 import { ItemSearch } from "./item-search";

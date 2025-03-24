@@ -1,4 +1,11 @@
-import { ImageIcon, LayoutDashboardIcon, Shapes, Type } from "lucide-react";
+import {
+  Bot,
+  Code2,
+  ImageIcon,
+  LayoutDashboardIcon,
+  Shapes,
+  Type,
+} from "lucide-react";
 import { TagIcon } from "lucide-react";
 
 import { Tag } from "@/content/schema";
@@ -23,6 +30,8 @@ export const itemTagIcon = (tag: Tag) => {
       "UI Kits": LayoutDashboardIcon,
       Icons: Shapes,
       Fonts: Type,
+      Components: Code2,
+      AI: Bot,
     }[tag] ?? TagIcon
   );
 };
