@@ -21,7 +21,7 @@ export interface ItemCardProps {
 export const ItemCard = ({ item }: ItemCardProps) => {
   return (
     <ItemDrawer item={item}>
-      <Card className="max-size-[300px] group relative aspect-square h-full w-full cursor-pointer justify-end overflow-hidden p-0">
+      <Card className="max-size-[300px] group relative aspect-5/4 h-full w-full cursor-pointer justify-end overflow-hidden p-0">
         <Image
           src={item.image}
           alt={item.title}
@@ -43,7 +43,7 @@ export const ItemCard = ({ item }: ItemCardProps) => {
               "group-hover:h-[80px] group-hover:opacity-100",
             )}
           >
-            <CardDescription className={cn("line-clamp-2 text-white/80")}>
+            <CardDescription className={cn("line-clamp-4 text-white/80")}>
               {item.description}
             </CardDescription>
           </div>

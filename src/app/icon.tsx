@@ -16,7 +16,6 @@ export default function Icon() {
           justifyContent: "center",
           width: "100%",
           height: "100%",
-          aspectRatio: "1 / 1",
           background: "linear-gradient(to top right, #fcd34d, #ea580c)",
           padding: "0.25rem",
         }}

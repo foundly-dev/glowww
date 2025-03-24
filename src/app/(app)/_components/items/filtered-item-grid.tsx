@@ -67,5 +67,5 @@ export const FilteredItemGrid = () => {
     );
   }
 
-  return <ItemGrid items={filteredItems} />;
+  return <ItemGrid items={sortedItems} />;
 };
