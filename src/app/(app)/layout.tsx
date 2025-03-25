@@ -8,7 +8,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     <div className="flex flex-col gap-4">
       <Suspense>
         <ItemSearchProvider>
-          <Navbar />
+          <Navbar className="flex md:hidden" />
           {children}
         </ItemSearchProvider>
       </Suspense>

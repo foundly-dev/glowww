@@ -8,7 +8,7 @@ import { Header } from "../_components/landing/header";
 export default function InfoPage() {
   return (
     <main className="flex flex-col">
-      <Header />
+      <Header search={false} />
 
       <div className="flex flex-col p-4">
         <div className="text-muted-foreground text-sm">

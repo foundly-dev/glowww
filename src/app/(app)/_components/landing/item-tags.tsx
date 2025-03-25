@@ -1,6 +1,7 @@
 "use client";
 
 import { Check, XIcon } from "lucide-react";
+import { FC } from "react";
 
 import { Button } from "@/components/ui/button";
 import { tags as allTags, Tag } from "@/content/schema";
@@ -9,7 +10,11 @@ import { cn } from "@/lib/utils";
 import { ItemTagIcon } from "../items/item-tag-icon";
 import { useItemSearch } from "../store/item-search.provider";
 
-export const ItemTags = () => {
+export interface ItemTagsProps {
+  className?: string;
+}
+
+export const ItemTags: FC<ItemTagsProps> = ({ className }) => {
   const { tags, setTags } = useItemSearch();
 
   const onTagClick = (tag: Tag) => {
@@ -19,7 +24,7 @@ export const ItemTags = () => {
   };
 
   return (
-    <div className="flex gap-2">
+    <div className={cn("flex gap-2", className)}>
       <div className="scrollbar-hide no-scrollbar flex w-full gap-2 overflow-x-scroll">
         {allTags.map((tag) => {
           const isActive = tags.includes(tag);

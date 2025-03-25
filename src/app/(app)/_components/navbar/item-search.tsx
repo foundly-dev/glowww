@@ -1,7 +1,7 @@
 "use client";
 
 import { Search, X } from "lucide-react";
-import { useState, useRef, useEffect, useCallback } from "react";
+import { useState, useRef, useEffect, useCallback, FC } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -14,8 +14,18 @@ import { cn } from "@/lib/utils";
 
 import { useItemSearch } from "../store/item-search.provider";
 
-export const ItemSearch = () => {
-  const [isOpen, setIsOpen] = useState(false);
+export interface ItemSearchProps {
+  forceOpen?: boolean;
+  containerClassName?: string;
+  inputClassName?: string;
+}
+
+export const ItemSearch: FC<ItemSearchProps> = ({
+  forceOpen,
+  containerClassName,
+  inputClassName,
+}) => {
+  const [isOpen, setIsOpen] = useState(forceOpen || false);
   const { search, setSearch } = useItemSearch();
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -24,15 +34,18 @@ export const ItemSearch = () => {
   }, []);
 
   const onClose = useCallback(() => {
-    setIsOpen(false);
+    if (!forceOpen) {
+      setIsOpen(false);
+    }
     setSearch("");
-  }, [setSearch]);
+  }, [setSearch, forceOpen]);
 
   const onSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearch(e.target.value);
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (forceOpen) return;
     if (e.key === "Escape") {
       onClose();
     }
@@ -51,6 +64,7 @@ export const ItemSearch = () => {
   }, [search, isOpen, onOpen]);
 
   useEffect(() => {
+    if (forceOpen) return;
     const down = (e: KeyboardEvent) => {
       if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
         e.preventDefault();
@@ -63,7 +77,7 @@ export const ItemSearch = () => {
     };
     document.addEventListener("keydown", down);
     return () => document.removeEventListener("keydown", down);
-  }, [onOpen, onClose, isOpen]);
+  }, [onOpen, onClose, isOpen, forceOpen]);
 
   return (
     <div className="relative flex items-center">
@@ -71,6 +85,7 @@ export const ItemSearch = () => {
         className={cn(
           "flex items-center transition-all duration-200 ease-in-out",
           isOpen ? "w-[200px]" : "w-0 overflow-hidden opacity-0",
+          containerClassName,
         )}
       >
         <div className="relative w-full">
@@ -82,7 +97,7 @@ export const ItemSearch = () => {
             value={search}
             onChange={onSearch}
             onKeyDown={handleKeyDown}
-            className="bg-background w-full pl-10"
+            className={cn("bg-background w-full pl-10", inputClassName)}
             disabled={!isOpen}
           />
           <X

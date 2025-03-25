@@ -2,6 +2,7 @@
 
 import { Info } from "lucide-react";
 import Link from "next/link";
+import { FC } from "react";
 
 import Github from "@/components/icons/github-icon";
 import X from "@/components/icons/x-icon";
@@ -14,9 +15,19 @@ import {
   mfbevanTwitterLink,
 } from "@/content/socials";
 
+import { ItemFavourites } from "../navbar/item-favourites";
+import { ItemSearch } from "../navbar/item-search";
+import { ItemSort } from "../navbar/item-sort";
+import { ItemTagsFilter } from "../navbar/item-tags-filter";
+
+import { ItemTags } from "./item-tags";
 import { Logo } from "./logo";
 
-export const Header = () => {
+export interface HeaderProps {
+  search?: boolean;
+}
+
+export const Header: FC<HeaderProps> = ({ search = true }) => {
   return (
     <div className="bg-background sticky top-0 z-10 flex w-screen flex-col gap-2">
       <div className="flex flex-col">
@@ -104,6 +115,20 @@ export const Header = () => {
 
         <Separator />
       </div>
+
+      {search && (
+        <div className="hidden flex-col gap-2 md:flex">
+          <div className="flex items-center gap-2 px-2">
+            <ItemSearch forceOpen containerClassName="w-[300px]" />
+            <ItemTagsFilter />
+            <ItemSort />
+            <ItemFavourites />
+          </div>
+          <Separator />
+          <ItemTags className="px-2" />
+          <Separator />
+        </div>
+      )}
     </div>
   );
 };
