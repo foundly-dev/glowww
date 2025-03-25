@@ -2,6 +2,7 @@ import {
   Bot,
   Boxes,
   Code2,
+  Grid3X3,
   ImageIcon,
   PenTool,
   Presentation,
@@ -32,6 +33,7 @@ export const itemTagIcon = (tag: Tag) => {
   return (
     {
       "3D": Boxes,
+      Backgrounds: Grid3X3,
       Illustrations: PenTool,
       "UI Kits": TabletSmartphone,
       Icons: Shapes,

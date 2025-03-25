@@ -2,6 +2,7 @@ import { Source } from "./sources";
 
 export const tags = [
   "3D",
+  "Backgrounds",
   "Components",
   "Fonts",
   "Icons",

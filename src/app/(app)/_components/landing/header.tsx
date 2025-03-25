@@ -31,6 +31,7 @@ export const Header: FC<HeaderProps> = ({ search = true }) => {
   return (
     <div className="bg-background sticky top-0 z-10 flex w-screen flex-col gap-2">
       <div className="flex flex-col">
+        <Separator />
         <div className="flex items-center justify-between">
           <Link href="/">
             <div className="flex items-center gap-2 p-2">

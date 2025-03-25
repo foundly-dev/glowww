@@ -79,7 +79,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn(`antialiased`, ...fontVariables)}>
+      <body
+        className={cn(
+          `max-w-screen overflow-x-hidden antialiased`,
+          ...fontVariables,
+        )}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="light"

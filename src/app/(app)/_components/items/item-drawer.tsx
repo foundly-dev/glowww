@@ -1,4 +1,4 @@
-import { ExternalLink, Globe, Package } from "lucide-react";
+import { Globe, Package } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -39,7 +39,7 @@ export const ItemDrawer = ({ item, children }: ItemDrawerProps) => {
                 src={item.image}
                 alt={item.title}
                 fill
-                className="zobject-cover blur-xs"
+                className="object-cover blur-xs"
               />
               <Image
                 src={item?.image}
@@ -95,11 +95,8 @@ export const ItemDrawer = ({ item, children }: ItemDrawerProps) => {
                   </Button>
                 </Link>
               )}
-              <Link href={item.href} target="_blank" className="self-end">
-                <Button>
-                  Visit
-                  <ExternalLink />
-                </Button>
+              <Link href={item.href} target="_blank" className="w-full">
+                <Button className="w-full">Visit</Button>
               </Link>
             </div>
           </div>
