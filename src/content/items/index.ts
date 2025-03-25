@@ -22,6 +22,7 @@ import { material3DesignKit } from "./material-3-design-kit";
 import { meshGradients } from "./mesh-gradients";
 import { miniIllustrations } from "./mini-illustrations";
 import { neumorphism } from "./neumorphism";
+import { photogradient } from "./photogradient";
 import { publicWork } from "./public-work";
 import { randoma11y } from "./randoma11y";
 import { reactIcons } from "./react-icons";
@@ -74,4 +75,5 @@ export const items = [
   dicebear,
   magicUi,
   randoma11y,
+  photogradient,
 ];
