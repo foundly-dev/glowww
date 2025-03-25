@@ -6,7 +6,7 @@ export const threeFiber: Item = {
   description:
     "Build your scene declaratively with re-usable, self-contained components that react to state, are readily interactive and can participate in React's ecosystem.",
   href: "https://r3f.docs.pmnd.rs",
-  image: "/items/three-fiber.png",
+  image: "/items/three-fiber.jpeg",
   tags: ["3D"],
   author: {
     name: "Poimandres",

@@ -10,7 +10,7 @@ export const magicUi: Item = {
     name: "Magic UI",
     href: "https://x.com/magicuidesign",
   },
-  image: "/items/magic-ui.png",
+  image: "/items/magic-ui.jpeg",
   tags: ["Components"],
   socials: {
     x: "https://x.com/magicuidesign",

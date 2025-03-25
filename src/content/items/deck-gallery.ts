@@ -8,7 +8,7 @@ export const deckGallery: Item = {
   author: {
     name: "Muharrem Şenyıl",
   },
-  image: "/items/deck-gallery.png",
+  image: "/items/deck-gallery.jpeg",
   tags: ["Inspiration", "Presentations"],
   href: "https://www.deck.gallery/",
   socials: {

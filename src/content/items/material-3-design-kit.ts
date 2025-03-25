@@ -12,7 +12,7 @@ export const material3DesignKit: Item = {
   },
   href: "https://www.figma.com/community/file/1035203688168086460",
   source: figma,
-  image: "/items/material-3-design-kit.png",
+  image: "/items/material-3-design-kit.jpeg",
   tags: ["UI Kits"],
   dateAdded: new Date("2025-03-23"),
 };

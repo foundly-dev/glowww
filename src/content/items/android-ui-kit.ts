@@ -13,6 +13,6 @@ export const androidUiKit: Item = {
   href: "https://www.figma.com/community/file/1478523627015571873",
   source: figma,
   tags: ["UI Kits"],
-  image: "/items/android-ui-kit.png",
+  image: "/items/android-ui-kit.jpeg",
   dateAdded: new Date("2025-03-23"),
 };

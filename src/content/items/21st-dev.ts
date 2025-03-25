@@ -6,7 +6,7 @@ export const _21stDev: Item = {
   description:
     "Discover, share, and craft perfect UI components with top design engineers. Built by design engineers, for design engineers.",
   href: "https://21st.dev",
-  image: "/items/21st-dev.png",
+  image: "/items/21st-dev.jpeg",
   tags: ["Components"],
   author: {
     name: "serafim",

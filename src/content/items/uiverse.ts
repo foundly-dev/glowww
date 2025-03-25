@@ -9,7 +9,7 @@ export const uiverse: Item = {
     name: "Pixel Galaxies",
     href: "https://uiverse.io/",
   },
-  image: "/items/uiverse.png",
+  image: "/items/uiverse.jpeg",
   tags: ["Components"],
   href: "https://uiverse.io/",
   socials: {

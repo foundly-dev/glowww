@@ -7,7 +7,7 @@ export const geometricWireframes: Item = {
   description:
     "Create depth, add a unique style to your files and designs (Sci-fi, futuristic, cyberpunk). Use all 50 shapes in this file creatively. Mix shapes and create new patterns.",
   href: "https://www.figma.com/community/file/1283695052087614334",
-  image: "/items/geometric-wireframes.png",
+  image: "/items/geometric-wireframes.jpeg",
   tags: ["3D", "Illustrations"],
   source: figma,
   author: {

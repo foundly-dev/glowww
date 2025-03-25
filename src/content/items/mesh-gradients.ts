@@ -6,7 +6,7 @@ export const meshGradients: Item = {
   title: "Mesh Gradients",
   description: "Mesh Gradients ✦ By Flowbase",
   href: "https://www.figma.com/community/file/1337446386181049001",
-  image: "/items/mesh-gradients.png",
+  image: "/items/mesh-gradients.jpeg",
   tags: ["Backgrounds"],
   source: figma,
   author: {

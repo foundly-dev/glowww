@@ -5,7 +5,7 @@ export const cssButtons: Item = {
   title: "CSS Buttons",
   description: "Empowering clicks, one button at a time.",
   href: "https://cssbuttons.io/",
-  image: "/items/css-buttons.png",
+  image: "/items/css-buttons.jpeg",
   tags: ["Components"],
   author: {
     name: "Adam Giebl",

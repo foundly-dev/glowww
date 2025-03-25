@@ -10,7 +10,7 @@ export const dribble: Item = {
   },
   href: "https://dribbble.com/",
   tags: ["Inspiration"],
-  image: "/items/dribble.png",
+  image: "/items/dribble.jpeg",
   socials: {
     x: "https://x.com/dribbble",
   },

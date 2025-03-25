@@ -7,7 +7,7 @@ export const abstractShapes: Item = {
   description:
     "Whether you’re looking for a geometric, organic or handcrafted look, use these abstract elements and sketch annotations to grab people's attention and make your message clearer and more compelling.",
   href: "https://www.figma.com/community/file/1104053093897243764",
-  image: "/items/abstract-shapes.png",
+  image: "/items/abstract-shapes.jpeg",
   tags: ["Illustrations"],
   source: figma,
   author: {

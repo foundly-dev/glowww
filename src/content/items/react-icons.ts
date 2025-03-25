@@ -6,7 +6,7 @@ export const reactIcons: Item = {
   description:
     "Include popular icons in your React projects easily with react-icons, which utilizes ES6 imports that allows you to include only the icons that your project is using.",
   href: "https://react-icons.github.io/react-icons/",
-  image: "/items/react-icons.png",
+  image: "/items/react-icons.jpeg",
   tags: ["Icons"],
   author: {
     name: "react-icons",

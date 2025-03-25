@@ -8,7 +8,7 @@ export const publicWork: Item = {
   author: {
     name: "Cosmos",
   },
-  image: "/items/public-work.png",
+  image: "/items/public-work.jpeg",
   tags: ["Images", "Illustrations"],
   href: "https://public.work/",
   socials: {

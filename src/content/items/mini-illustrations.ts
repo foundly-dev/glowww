@@ -7,7 +7,7 @@ export const miniIllustrations: Item = {
   description:
     "🕹️ Level up your designs with our cool collection of 68+ 3D mini illustrations 📱. They're like power-ups for your projects, making them more engaging and memorable ⭐️.",
   href: "https://www.figma.com/community/file/1362919410891634837",
-  image: "/items/mini-illustrations.png",
+  image: "/items/mini-illustrations.jpeg",
   tags: ["3D", "Illustrations"],
   source: figma,
   author: {

@@ -6,7 +6,7 @@ export const gridsPatterns: Item = {
   title: "Grids & Patterns",
   description: "Grids & Patterns ✦ By Flowbase",
   href: "https://www.figma.com/community/file/1337446386181049001",
-  image: "/items/grids-patterns.png",
+  image: "/items/grids-patterns.jpeg",
   tags: ["Backgrounds"],
   source: figma,
   author: {

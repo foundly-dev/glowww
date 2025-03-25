@@ -10,7 +10,7 @@ export const unsplash: Item = {
   },
   tags: ["Images", "Illustrations"],
   href: "https://unsplash.com/",
-  image: "/items/unsplash.png",
+  image: "/items/unsplash.jpeg",
   socials: {
     x: "https://x.com/unsplash",
   },

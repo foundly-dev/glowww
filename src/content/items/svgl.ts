@@ -9,7 +9,7 @@ export const svgl: Item = {
     name: "Pablo",
     href: "https://pheralb.dev/",
   },
-  image: "/items/svgl.png",
+  image: "/items/svgl.jpeg",
   tags: ["Icons"],
   href: "https://svgl.app/",
   socials: {

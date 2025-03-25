@@ -10,7 +10,7 @@ export const undraw: Item = {
     href: "https://ninalimpi.com/",
   },
 
-  image: "/items/undraw.png",
+  image: "/items/undraw.jpeg",
   tags: ["Illustrations"],
   href: "https://undraw.co/",
   socials: {

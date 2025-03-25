@@ -6,7 +6,7 @@ export const retroShapes: Item = {
   title: "Retro Shapes",
   description: "Retro shapes for your designs",
   href: "https://www.figma.com/community/file/1344600563086398535",
-  image: "/items/retro-shapes.png",
+  image: "/items/retro-shapes.jpeg",
   tags: ["Illustrations"],
   source: figma,
   author: {

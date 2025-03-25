@@ -10,7 +10,7 @@ export const spline: Item = {
   author: {
     name: "Spline",
   },
-  image: "/items/spline.png",
+  image: "/items/spline.jpeg",
   socials: {
     x: "https://x.com/splinetool",
   },

@@ -9,7 +9,7 @@ export const developerIcons: Item = {
     name: "Xandemon",
     href: "https://xandemon.github.io/",
   },
-  image: "/items/developer-icons.png",
+  image: "/items/developer-icons.jpeg",
   tags: ["Icons"],
   href: "https://xandemon.github.io/developer-icons/",
   socials: {

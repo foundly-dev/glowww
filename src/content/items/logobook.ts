@@ -8,7 +8,7 @@ export const logobook: Item = {
   author: {
     name: "Logobook",
   },
-  image: "/items/logobook.png",
+  image: "/items/logobook.jpeg",
   tags: ["Logos"],
   href: "http://logobook.com/",
   socials: {

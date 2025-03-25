@@ -9,7 +9,7 @@ export const aceternityUI: Item = {
     name: "Manu Arora",
     href: "https://x.com/mannupaaji",
   },
-  image: "/items/aceternity-ui.png",
+  image: "/items/aceternity-ui.jpeg",
   tags: ["Components"],
   href: "https://ui.aceternity.com/",
   socials: {

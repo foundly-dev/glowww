@@ -10,7 +10,7 @@ export const ios18UiKit: Item = {
     name: "Apple",
     href: "https://www.figma.com/@apple",
   },
-  image: "/items/ios-18-ui-kit.png", // Replace with the actual image path
+  image: "/items/ios-18-ui-kit.jpeg",
   tags: ["UI Kits"],
   href: "https://www.figma.com/community/file/1385659531316001292",
   source: figma,

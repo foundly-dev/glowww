@@ -6,7 +6,7 @@ export const neumorphism: Item = {
   description:
     "Neumorphism, also known as soft UI, is a visual design trend that combines elements of skeuomorphism and flat design. It creates a soft, extruded plastic look by using subtle contrasting shadows to create the illusion of depth. This style mimics physical objects while maintaining a minimal and modern aesthetic, often featuring monochromatic color schemes with low contrast shadows and highlights.",
   href: "https://neumorphism.io",
-  image: "/items/neumorphism.png",
+  image: "/items/neumorphism.jpeg",
   tags: ["Components"],
   author: {
     name: "Adam Giebl",

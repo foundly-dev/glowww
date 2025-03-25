@@ -9,7 +9,7 @@ export const lucide: Item = {
     name: "Eric Fennis",
     href: "https://x.com/ericfennis/",
   },
-  image: "/items/lucide.png",
+  image: "/items/lucide.jpeg",
   tags: ["Icons"],
   href: "https://lucide.dev/",
   socials: {

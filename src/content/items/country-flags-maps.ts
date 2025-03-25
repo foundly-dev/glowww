@@ -7,7 +7,7 @@ export const countryFlagsMaps: Item = {
   description:
     "Are you looking for a set of editable country flags to add to your Figma design? You have found what you are looking for 📍🌎.",
   href: "https://www.figma.com/community/file/1246095571642376771",
-  image: "/items/country-flags-maps.png",
+  image: "/items/country-flags-maps.jpeg",
   tags: ["Illustrations", "Icons"],
   source: figma,
   author: {

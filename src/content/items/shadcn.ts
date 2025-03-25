@@ -6,7 +6,7 @@ export const shadcn: Item = {
   description:
     "Build your component library. A set of beautifully-designed, accessible components and a code distribution platform. Works with your favorite frameworks. Open Source. Open Code.",
   href: "https://ui.shadcn.com/",
-  image: "/items/shadcn.png",
+  image: "/items/shadcn.jpeg",
   tags: ["Components"],
   author: {
     name: "shadcn",

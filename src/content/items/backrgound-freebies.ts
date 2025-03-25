@@ -10,7 +10,7 @@ export const backgroundFreebies: Item = {
     name: "codetoform",
     href: "https://www.figma.com/@codetoform",
   },
-  image: "/items/background-freebies.png",
+  image: "/items/background-freebies.jpeg",
   tags: ["Backgrounds"],
   source: figma,
   dateAdded: new Date("2025-03-24"),

@@ -6,7 +6,7 @@ export const three: Item = {
   description:
     "Three.js allows the creation of GPU-accelerated 3D animations using the JavaScript language as part of a website without relying on proprietary browser plugins.",
   href: "https://threejs.org/",
-  image: "/items/three.png",
+  image: "/items/three.jpeg",
   tags: ["3D"],
   author: {
     name: "mrdoob",

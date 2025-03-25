@@ -9,7 +9,7 @@ export const logofast: Item = {
     href: "https://x.com/marc_louvion",
   },
   href: "https://logofa.st/",
-  image: "/items/logofast.png",
+  image: "/items/logofast.jpeg",
   tags: ["Logos"],
   socials: {
     x: "https://x.com/marc_louvion",

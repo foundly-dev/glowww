@@ -6,7 +6,7 @@ export const dicebear: Item = {
   description:
     "The avatar library you've always been looking for. Create avatars for your profiles, designs, websites or apps. Piece by piece or based on a seed.",
   href: "https://www.dicebear.com/",
-  image: "/items/dicebear.png",
+  image: "/items/dicebear.jpeg",
   tags: ["Icons"],
   author: {
     name: "DiceBear",
