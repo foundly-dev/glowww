@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     description,
     images: [
       {
-        url: "/preview.png",
+        url: "/preview.jpeg",
         alt,
       },
     ],
