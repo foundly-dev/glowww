@@ -81,7 +81,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          `max-w-screen overflow-x-hidden antialiased`,
+          `bg-muted-foreground/5 max-w-screen overflow-x-hidden antialiased`,
           ...fontVariables,
         )}
       >

@@ -7,7 +7,7 @@ export default function Home() {
     <main className="flex flex-col">
       <Header />
       <Navbar className="flex md:hidden" />
-      <div className="flex flex-col gap-4 p-4 pb-24">
+      <div className="flex flex-col gap-4 p-4 pb-20 md:pb-4">
         <FilteredItemGrid />
       </div>
     </main>

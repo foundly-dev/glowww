@@ -23,6 +23,7 @@ import { meshGradients } from "./mesh-gradients";
 import { miniIllustrations } from "./mini-illustrations";
 import { neumorphism } from "./neumorphism";
 import { publicWork } from "./public-work";
+import { randoma11y } from "./randoma11y";
 import { reactIcons } from "./react-icons";
 import { retroShapes } from "./retro-shapes";
 import { shadcn } from "./shadcn";
@@ -72,4 +73,5 @@ export const items = [
   reactIcons,
   dicebear,
   magicUi,
+  randoma11y,
 ];
