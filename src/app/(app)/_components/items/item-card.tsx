@@ -1,8 +1,11 @@
 "use client";
 
+import { ExternalLink } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardDescription,
@@ -39,6 +42,20 @@ export const ItemCard = ({ item }: ItemCardProps) => {
           />
 
           <div className="absolute inset-0 z-[2] bg-gradient-to-t from-black/60 to-transparent" />
+
+          <Link
+            href={item.href}
+            target="_blank"
+            className="absolute top-2 right-2 z-[3] hidden group-hover:block"
+          >
+            <Button
+              className="text-white"
+              onClick={(e) => e.stopPropagation()}
+              size="sm"
+            >
+              Visit <ExternalLink className="size-4" />
+            </Button>
+          </Link>
 
           <CardHeader className="z-[3] p-4 pb-2">
             <div className="flex items-center justify-between">
