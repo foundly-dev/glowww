@@ -21,6 +21,7 @@ import { magicUi } from "./magic-ui";
 import { material3DesignKit } from "./material-3-design-kit";
 import { meshGradients } from "./mesh-gradients";
 import { miniIllustrations } from "./mini-illustrations";
+import { neobrutalism } from "./neobrutalism";
 import { neumorphism } from "./neumorphism";
 import { photogradient } from "./photogradient";
 import { publicWork } from "./public-work";
@@ -76,4 +77,5 @@ export const items = [
   magicUi,
   randoma11y,
   photogradient,
+  neobrutalism,
 ];
